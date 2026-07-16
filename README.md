@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <p align="center">
   <img src="https://laravel.com/img/logomark.min.svg" width="180" alt="Laravel Logo">
 </p>
@@ -17,7 +17,7 @@ authentication, and database management.
 <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
 </p>
 
----
+
 
 # About Laravel
 
@@ -62,11 +62,10 @@ cleaner, and more enjoyable.
 
 ## Installation
 
-```bash
 git clone https://github.com/Zaki228-jpg/NGO-full-Management-system.git
 
 cd NGO-full-Management-system
-```
+
 
 ## Author
 
@@ -75,6 +74,4 @@ cd NGO-full-Management-system
 Software Engineering Student
 
 Learning Laravel and Full Stack Web Development
-=======
 
->>>>>>> 2186db7cf49280fa255b8e4a7c00c8c4c09146c8
