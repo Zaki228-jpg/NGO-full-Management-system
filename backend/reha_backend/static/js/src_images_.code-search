@@ -1,0 +1,303 @@
+# Query: src="images/
+# ContextLines: 1
+
+73 results - 22 files
+
+backend\reha_backend\core\templates\core\index.html:
+  125              <div class="slide active">
+  126:                 <img src="images/slide1.jpg' %}"" alt="REHA humanitarian work">
+  127              </div>
+
+  129              <div class="slide">
+  130:                 <img src="images/slide2.jpg" alt="REHA helping communities">
+  131              </div>
+
+  133              <div class="slide">
+  134:                 <img src="images/slide3.jpg" alt="REHA development programs">
+  135              </div>
+
+  166              <div class="who-image">
+  167:                 <img src="images/about.jpg" alt="REHA Organization">
+  168              </div>
+
+  363              <div class="project-card">
+  364:                 <img src="images/project1.jpg">
+  365                  <h3>Ongoing Projects</h3>
+
+  369              <div class="project-card">
+  370:                 <img src="images/project2.jpg">
+  371                  <h3>Completed Projects</h3>
+
+  375              <div class="project-card">
+  376:                 <img src="images/project3.jpg">
+  377                  <h3>Recent Projects</h3>
+
+  381              <div class="project-card">
+  382:                 <img src="images/project4.jpg">
+  383                  <h3>Project Gallery</h3>
+
+  422              <div class="news-card">
+  423:                 <img src="images/news4.jpg" alt="Announcement">
+  424                  <h3>New Development Initiative</h3>
+
+  448              <div class="partner-logo">
+  449:                 <img src="images/partner1.png" alt="Partner 1">
+  450              </div>
+
+  452              <div class="partner-logo">
+  453:                 <img src="images/partner2.png" alt="Partner 2">
+  454              </div>
+
+  456              <div class="partner-logo">
+  457:                 <img src="images/partner3.png" alt="Partner 3">
+  458              </div>
+
+  460              <div class="partner-logo">
+  461:                 <img src="images/partner4.png" alt="Partner 4">
+  462              </div>
+
+  464              <div class="partner-logo">
+  465:                 <img src="images/partner5.png" alt="Partner 5">
+  466              </div>
+
+frontend\about.html:
+   59  
+   60:                 <img src="images/about.jpg" alt="REHA Organization">
+   61  
+
+  113  
+  114:                 <img src="images/team1.jpg">
+  115  
+
+  125  
+  126:                 <img src="images/team2.jpg">
+  127  
+
+  136  
+  137:                 <img src="images/team3.jpg">
+  138  
+
+frontend\announcements.html:
+  10          <div class="news-card">
+  11:             <img src="images/news4.jpg">
+  12              <h3>New Office Opening</h3>
+
+frontend\badakhshan.html:
+  57  
+  58:                 <img src="images/kabul.jpg">
+  59  
+
+frontend\completed-projects.html:
+  30              <div class="project-card">
+  31:                 <img src="images/project4.jpg">
+  32                  <h3>Clean Water Project</h3>
+
+  36              <div class="project-card">
+  37:                 <img src="images/project5.jpg">
+  38                  <h3>Emergency Food Assistance</h3>
+
+  42              <div class="project-card">
+  43:                 <img src="images/project6.jpg">
+  44                  <h3>Community Training Program</h3>
+
+frontend\education.html:
+  52  
+  53:                 <img src="images/education.jpg">
+  54  
+
+frontend\emergency.html:
+  52  
+  53:                 <img src="images/health.jpg">
+  54  
+
+frontend\events.html:
+  40  
+  41:                 <img src="images/news1.jpg">
+  42  
+
+  64  
+  65:                 <img src="images/news2.jpg">
+  66  
+
+  88  
+  89:                 <img src="images/news3.jpg">
+  90  
+
+frontend\gallery.html:
+  29  
+  30:             <img src="images/project1.jpg">
+  31:             <img src="images/project2.jpg">
+  32:             <img src="images/project3.jpg">
+  33:             <img src="images/project4.jpg">
+  34:             <img src="images/project5.jpg">
+  35:             <img src="images/project6.jpg">
+  36  
+
+frontend\health.html:
+  52  
+  53:                 <img src="images/health.jpg">
+  54  
+
+frontend\herat.html:
+  57  
+  58:                 <img src="images/kabul.jpg">
+  59  
+
+frontend\index.html:
+  123              <div class="slide active">
+  124:                 <img src="images/slide1.jpg" alt="REHA humanitarian work">
+  125              </div>
+
+  127              <div class="slide">
+  128:                 <img src="images/slide2.jpg" alt="REHA helping communities">
+  129              </div>
+
+  131              <div class="slide">
+  132:                 <img src="images/slide3.jpg" alt="REHA development programs">
+  133              </div>
+
+  164              <div class="who-image">
+  165:                 <img src="images/about.jpg" alt="REHA Organization">
+  166              </div>
+
+  361              <div class="project-card">
+  362:                 <img src="images/project1.jpg">
+  363                  <h3>Ongoing Projects</h3>
+
+  367              <div class="project-card">
+  368:                 <img src="images/project2.jpg">
+  369                  <h3>Completed Projects</h3>
+
+  373              <div class="project-card">
+  374:                 <img src="images/project3.jpg">
+  375                  <h3>Recent Projects</h3>
+
+  379              <div class="project-card">
+  380:                 <img src="images/project4.jpg">
+  381                  <h3>Project Gallery</h3>
+
+  399              <div class="news-card">
+  400:                 <img src="images/news1.jpg" alt="Education Program">
+  401                  <h3>Education Support Program Launched</h3>
+
+  406              <div class="news-card">
+  407:                 <img src="images/news2.jpg" alt="Community Event">
+  408                  <h3>Community Health Awareness Event</h3>
+
+  413              <div class="news-card">
+  414:                 <img src="images/news3.jpg" alt="Press Release">
+  415                  <h3>Partnership Announcement</h3>
+
+  420              <div class="news-card">
+  421:                 <img src="images/news4.jpg" alt="Announcement">
+  422                  <h3>New Development Initiative</h3>
+
+  446              <div class="partner-logo">
+  447:                 <img src="images/partner1.png" alt="Partner 1">
+  448              </div>
+
+  450              <div class="partner-logo">
+  451:                 <img src="images/partner2.png" alt="Partner 2">
+  452              </div>
+
+  454              <div class="partner-logo">
+  455:                 <img src="images/partner3.png" alt="Partner 3">
+  456              </div>
+
+  458              <div class="partner-logo">
+  459:                 <img src="images/partner4.png" alt="Partner 4">
+  460              </div>
+
+  462              <div class="partner-logo">
+  463:                 <img src="images/partner5.png" alt="Partner 5">
+  464              </div>
+
+frontend\kabul.html:
+  57  
+  58:                 <img src="images/kabul.jpg">
+  59  
+
+frontend\livelihood.html:
+  52  
+  53:                 <img src="images/health.jpg">
+  54  
+
+frontend\news.html:
+  40  
+  41:                 <img src="images/news1.jpg">
+  42  
+
+  64  
+  65:                 <img src="images/news2.jpg">
+  66  
+
+  88  
+  89:                 <img src="images/news3.jpg">
+  90  
+
+frontend\ongoing-projects.html:
+  37              <div class="project-card">
+  38:                 <img src="images/project1.jpg">
+  39                  <h3>Education Development Program</h3>
+
+  43              <div class="project-card">
+  44:                 <img src="images/project2.jpg">
+  45                  <h3>Community Health Initiative</h3>
+
+  49              <div class="project-card">
+  50:                 <img src="images/project3.jpg">
+  51                  <h3>Women Empowerment Project</h3>
+
+frontend\panjshir.html:
+  57  
+  58:                 <img src="images/kabul.jpg">
+  59  
+
+frontend\press.html:
+  10          <div class="news-card">
+  11:             <img src="images/press1.jpg">
+  12              <h3>New Development Initiative</h3>
+
+frontend\recent-projects.html:
+   43  
+   44:                 <img src="images/projecta.jpg">
+   45  
+
+   61  
+   62:                 <img src="images/projectb.jpg">
+   63  
+
+   79  
+   80:                 <img src="images/projectc.jpg">
+   81  
+
+   97  
+   98:                 <img src="images/projectd.jpg">
+   99  
+
+  115  
+  116:                 <img src="images/projecte.jpg">
+  117  
+
+  133  
+  134:                 <img src="images/project6.jpg">
+  135  
+
+frontend\takhar.html:
+  57  
+  58:                 <img src="images/kabul.jpg">
+  59  
+
+frontend\vision-mission.html:
+  38  
+  39:                 <img src="images/mission.jpg">
+  40  
+
+  92  
+  93:                 <img src="images/vision.jpg">
+  94  
+
+frontend\women.html:
+  52  
+  53:                 <img src="images/health.jpg">
+  54  

@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Projects - REHA Organization</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+    <h1>Our Projects</h1>
+
+    <div class="projects-container">
+
+        {% for project in projects %}
+
+        <div class="project-card">
+
+            <h2>{{ project.title }}</h2>
+
+            <img src="{{ project.image.url }}" width="300">
+
+            <p>{{ project.description }}</p>
+
+            <p><strong>Location:</strong> {{ project.location }}</p>
+
+            <p><strong>Status:</strong> {{ project.status }}</p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</body>
+
+</html>

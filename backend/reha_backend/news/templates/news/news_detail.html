@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+{% load static %}
+
+<!-- ===== START NEWS DETAIL PAGE ===== -->
+
+<section class="news-detail">
+
+    <h1 class="news-title">{{ article.title }}</h1>
+
+    <div class="news-container">
+
+        <!-- MEDIA -->
+        <div class="news-media">
+
+            {% if article.video_url %}
+
+            <iframe src="{{ article.video_url }}" frameborder="0" allowfullscreen>
+            </iframe>
+
+            {% else %}
+
+            <img src="{{ article.image.url }}">
+
+            {% endif %}
+
+        </div>
+
+        <!-- CONTENT -->
+        <div class="news-content">
+
+            <p><strong>Category:</strong> {{ article.category }}</p>
+            <p><strong>Date:</strong> {{ article.published_date }}</p>
+
+            <p class="description">
+                {{ article.content }}
+            </p>
+
+            <a href="/" class="back-btn">← Back to Home</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===== END NEWS DETAIL PAGE ===== -->
+
+{% endblock %}

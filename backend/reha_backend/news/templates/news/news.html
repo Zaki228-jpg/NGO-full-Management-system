@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>News - REHA Organization</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+    <h1>Latest News</h1>
+
+    <div class="news-container">
+
+        {% for article in news %}
+
+        <div class="news-card">
+
+            <h2>{{ article.title }}</h2>
+
+            <img src="{{ article.image.url }}" width="300">
+
+            <p>{{ article.content }}</p>
+
+            <p>{{ article.published_date }}</p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</body>
+
+</html>

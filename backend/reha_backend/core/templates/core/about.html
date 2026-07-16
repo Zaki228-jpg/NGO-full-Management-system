@@ -1,0 +1,110 @@
+<!-- ===== START ABOUT US PAGE ===== -->
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/reha-styles.css' %}">
+
+<!-- ===== START PAGE BANNER ===== -->
+<section class="page-banner">
+    <div class="grid-overlay"></div>
+    <span class="eyebrow">REHA Organization</span>
+    <h1>About <em>REHA</em></h1>
+    <p>Working for humanitarian support and sustainable development across Afghanistan.</p>
+</section>
+<!-- ===== END PAGE BANNER ===== -->
+
+
+<!-- ===== START ORGANIZATION INTRODUCTION ===== -->
+<section class="about-intro">
+    <div class="about-container">
+
+        <div class="about-text">
+            <p class="section-eyebrow">Our Story</p>
+            <h2>Who We Are</h2>
+            <p>
+                REHA Organization is a humanitarian and development organization
+                working to support vulnerable communities across Afghanistan.
+                Our programs focus on education, health, community development,
+                and emergency response.
+            </p>
+            <p>
+                Through partnerships and community engagement, REHA aims
+                to improve living conditions and create sustainable
+                opportunities for people in need.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="{% static 'images/about.jpg' %}" alt="REHA Organization team working in the field">
+        </div>
+
+    </div>
+</section>
+<!-- ===== END ORGANIZATION INTRODUCTION ===== -->
+
+
+<!-- ===== START MISSION VISION SECTION ===== -->
+<section class="mission-vision">
+
+    <div class="mission">
+        <h2>
+            <span class="icon">🎯</span>
+            Our Mission
+        </h2>
+        <p>
+            To empower communities through humanitarian assistance,
+            education, and sustainable development programs that
+            improve quality of life and restore dignity.
+        </p>
+    </div>
+
+    <div class="vision">
+        <h2>
+            <span class="icon">✦</span>
+            Our Vision
+        </h2>
+        <p>
+            A society where every individual has access to opportunities,
+            resources, and support needed to live with dignity and lasting security.
+        </p>
+    </div>
+
+</section>
+<!-- ===== END MISSION VISION SECTION ===== -->
+
+
+<!-- ===== START TEAM SECTION ===== -->
+<section class="team">
+    <p class="section-eyebrow">The People Behind REHA</p>
+    <h2 class="section-title">Our <span>Team</span></h2>
+
+    <div class="team-container">
+
+        <div class="team-member">
+            <img src="{% static 'images/team1.jpg' %}" alt="Mohammad Zakir Zaki">
+            <h3>Mohammad Zakir Zaki</h3>
+            <h3>Executive Director</h3>
+            <p>Leading organizational strategy and programs.</p>
+        </div>
+
+        <div class="team-member">
+            <img src="{% static 'images/team2.jpg' %}" alt="Program Manager">
+            <h3>Program Manager</h3>
+            <h3>Programs & Development</h3>
+            <p>Managing development and humanitarian projects.</p>
+        </div>
+
+        <div class="team-member">
+            <img src="{% static 'images/team3.jpg' %}" alt="Field Coordinator">
+            <h3>Field Coordinator</h3>
+            <h3>Field Operations</h3>
+            <p>Coordinating field operations in different provinces.</p>
+        </div>
+
+    </div>
+</section>
+<!-- ===== END TEAM SECTION ===== -->
+
+{% endblock %}
+<!-- ===== END ABOUT US PAGE ===== -->

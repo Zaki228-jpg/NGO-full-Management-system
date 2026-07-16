@@ -1,0 +1,323 @@
+{% load static %}
+
+<!--
+  Add to your <head>:
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
+-->
+
+<!-- ===== HEADER BAR ===== -->
+<header class="hero-header" id="hhHeader"
+    style="position:fixed!important;top:0!important;left:0!important;right:0!important;height:70px!important;z-index:9000!important;">
+
+    <!-- hh-inner: flex row, left + right items, logo absolutely centered -->
+    <div class="hh-inner"
+        style="position:relative!important;display:flex!important;align-items:center!important;justify-content:space-between!important;height:70px!important;padding:0 28px!important;box-sizing:border-box!important;">
+
+        <!-- LEFT: Hamburger -->
+        <button class="hh-menu-btn" id="hhMenuBtn" aria-label="Open navigation" aria-expanded="false"
+            style="position:relative!important;z-index:2!important;flex-shrink:0!important;">
+            <div class="hh-bars">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span class="hh-menu-label">Menu</span>
+        </button>
+
+        <!-- CENTER: Logo — absolutely pinned to exact center of header -->
+        <div class="hh-logo"
+            style="position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;z-index:1!important;display:flex!important;align-items:center!important;justify-content:center!important;pointer-events:auto!important;">
+            <a href="{% url 'home' %}"
+                style="display:flex!important;align-items:center!important;text-decoration:none!important;">
+                <img src="{% static 'images/logo.png' %}" alt="Logo"
+                    style="height:46px!important;width:auto!important;display:block!important;">
+            </a>
+        </div>
+
+        <div class="navbar-controls">
+            <label class="theme-toggle" aria-label="Toggle dark mode">
+                <input type="checkbox" id="themeCheck">
+                <div class="theme-toggle-track">
+                    <div class="theme-toggle-thumb">
+                        <span class="sun-icon">☀️</span>
+                        <span class="moon-icon">🌙</span>
+                    </div>
+                </div>
+            </label>
+
+</header>
+
+
+<!-- ===== FULL-SCREEN OVERLAY ===== -->
+<div class="hh-overlay" id="hhOverlay" aria-hidden="true">
+
+    <div class="hh-panel" id="hhPanel">
+
+        <!-- SCREEN A: Main top-level menu -->
+        <div class="hh-screen hh-screen-main">
+            <ul class="hh-main-list" id="hhMainList">
+                <!-- Built by JS -->
+            </ul>
+        </div>
+
+        <!-- SCREEN B: Submenu (parent title + sub-items) -->
+        <div class="hh-screen hh-screen-sub" id="hhScreenSub">
+
+            <!-- "← WHO WE ARE" — the parent title acts as the back button -->
+            <button class="hh-sub-back" id="hhSubBack">
+                <span class="hh-sub-back-arrow">&#8592;</span>
+                <span class="hh-sub-back-label" id="hhSubBackLabel">Back</span>
+            </button>
+
+            <!-- Sub-items populated by JS -->
+            <ul class="hh-sub-list" id="hhSubList"></ul>
+
+        </div>
+
+        <!-- Footer strip (social + language) -->
+        <div class="hh-ov-footer">
+            <ul class="hh-social">
+
+                <a href="https://facebook.com/rehaorganization" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="https://twitter.com/rehaorg" target="_blank">
+                    <i aria-hidden="true" class="fab fa-twitter"></i>
+                </a>
+
+                <a href="https://linkedin.com/company/reha" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://instagram.com/rehaorg" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+        </div>
+        </ul>
+        <div class="hh-lang">
+            <span>Language</span>
+            <a href="#">دری</a>
+            <span>|</span>
+            <a href="#">پښتو</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- Dim backdrop — click to close -->
+<div class="hh-backdrop" id="hhBackdrop"></div>
+</div>
+
+
+<!-- ===== MENU DATA (hidden) ===== -->
+<nav id="hhData" style="display:none;" aria-hidden="true">
+    <ul>
+        <li data-label="Who We Are">
+            <ul>
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/vision/">Our Vision &amp; Mission</a></li>
+                <li><a href="/values/">Core Values</a></li>
+            </ul>
+        </li>
+        <li data-label="What We Do">
+            <ul>
+                <li><a href="/education/">Education Programs</a></li>
+                <li><a href="/health/">Health Programs</a></li>
+                <li><a href="/emergency/">Emergency Relief</a></li>
+                <li><a href="/women/">Women Empowerment</a></li>
+                <li><a href="/livelihood/">Sustainable Livelihood</a></li>
+            </ul>
+        </li>
+        <li data-label="Where We Work">
+            <ul>
+                <li><a href="/kabul/">Kabul</a></li>
+                <li><a href="/herat/">Herat</a></li>
+                <li><a href="/wardak/">Wardak</a></li>
+                <li><a href="/takhar/">Takhar</a></li>
+                <li><a href="/panjshir/">Panjshir</a></li>
+            </ul>
+        </li>
+        <li data-label="Projects">
+            <ul>
+                <li><a href="/ongoingprojects/">Ongoing Projects</a></li>
+                <li><a href="/completed-projects/">Completed Projects</a></li>
+                <li><a href="/recent-projects/">Incoming Projects</a></li>
+                <li><a href="/gallery/d">Project Gallery</a></li>
+            </ul>
+        </li>
+        <li data-label="Media">
+            <ul>
+                <li><a href="/news/">Latest News</a></li>
+                <li><a href="/events/">Events</a></li>
+                <li><a href="/press/">Press Releases</a></li>
+                <li><a href="/announcements/">Announcements</a></li>
+            </ul>
+        </li>
+        <li data-label="Contact">
+            <ul>
+                <li><a href="/contact/">Contact Us</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+
+<!-- ===== SCRIPT ===== -->
+<script>
+    (function () {
+        var header = document.getElementById('hhHeader');
+        var menuBtn = document.getElementById('hhMenuBtn');
+        var overlay = document.getElementById('hhOverlay');
+        var panel = document.getElementById('hhPanel');
+        var mainList = document.getElementById('hhMainList');
+        var subList = document.getElementById('hhSubList');
+        var subBack = document.getElementById('hhSubBack');
+        var subLabel = document.getElementById('hhSubBackLabel');
+        var backdrop = document.getElementById('hhBackdrop');
+        var dataSrc = document.getElementById('hhData');
+
+        /* ── Build main list from data ─────────────────────────── */
+        dataSrc.querySelectorAll(':scope > ul > li').forEach(function (srcLi) {
+            var label = srcLi.getAttribute('data-label') || '';
+            var children = srcLi.querySelectorAll('ul > li');
+
+            var li = document.createElement('li');
+            var a = document.createElement('a');
+            a.href = '#';
+
+            a.appendChild(document.createTextNode(label));
+
+            var arrow = document.createElement('span');
+            arrow.className = 'hh-arrow';
+            arrow.textContent = '→';
+            a.appendChild(arrow);
+
+            a.addEventListener('click', function (e) {
+                e.preventDefault();
+                openSub(label, children);
+            });
+
+            li.appendChild(a);
+            mainList.appendChild(li);
+        });
+
+        /* ── Open / close overlay ──────────────────────────────── */
+        function openOverlay() {
+            overlay.classList.add('is-open');
+            overlay.removeAttribute('aria-hidden');
+            menuBtn.classList.add('is-open');
+            menuBtn.setAttribute('aria-expanded', 'true');
+            menuBtn.querySelector('.hh-menu-label').textContent = 'Close';
+            document.body.style.overflow = 'hidden';
+            closeSubNoAnim();          /* always start on main menu */
+        }
+
+        function closeOverlay() {
+            overlay.classList.remove('is-open');
+            overlay.setAttribute('aria-hidden', 'true');
+            menuBtn.classList.remove('is-open');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.querySelector('.hh-menu-label').textContent = 'Menu';
+            document.body.style.overflow = '';
+            closeSubNoAnim();
+        }
+
+        /* ── Submenu open / close ──────────────────────────────── */
+        function openSub(label, children) {
+            /* Set the back-button label to the parent menu name */
+            subLabel.textContent = label;
+
+            /* Populate sub-items */
+            subList.innerHTML = '';
+            children.forEach(function (srcLi) {
+                var srcA = srcLi.querySelector('a');
+                if (!srcA) return;
+                var li = document.createElement('li');
+                var a = document.createElement('a');
+                a.href = srcA.getAttribute('href');
+                a.textContent = srcA.textContent;
+                li.appendChild(a);
+                subList.appendChild(li);
+            });
+
+            /* Switch panel to sub-open state */
+            panel.classList.add('sub-open');
+        }
+
+        function closeSub() {
+            panel.classList.remove('sub-open');
+        }
+
+        function closeSubNoAnim() {
+            /* Instantly reset without transition flash */
+            panel.style.transition = 'none';
+            panel.classList.remove('sub-open');
+            /* Force reflow then restore transition */
+            void panel.offsetWidth;
+            panel.style.transition = '';
+        }
+
+        /* ── Events ────────────────────────────────────────────── */
+        menuBtn.addEventListener('click', function () {
+            overlay.classList.contains('is-open') ? closeOverlay() : openOverlay();
+        });
+
+        backdrop.addEventListener('click', closeOverlay);
+
+        /* Clicking the parent-title back button returns to main menu */
+        subBack.addEventListener('click', closeSub);
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key !== 'Escape') return;
+            if (panel.classList.contains('sub-open')) {
+                closeSub();           /* first Escape → back to main menu */
+            } else if (overlay.classList.contains('is-open')) {
+                closeOverlay();       /* second Escape → close overlay */
+            }
+        });
+
+        /* ── Hide on scroll down, show on scroll up ────────────── */
+        var lastScrollY = 0;
+        var scrollThreshold = 80; /* px from top before hide/show activates */
+
+        window.addEventListener('scroll', function () {
+            var currentScrollY = window.scrollY;
+
+            /* .scrolled: darkens header background after 30px */
+            header.classList.toggle('scrolled', currentScrollY > 30);
+
+            /* Only hide/show after user has scrolled past the threshold */
+            if (currentScrollY > scrollThreshold) {
+                if (currentScrollY > lastScrollY) {
+                    /* Scrolling DOWN → hide */
+                    header.classList.add('header-hidden');
+                    /* Close overlay if open */
+                    if (overlay.classList.contains('is-open')) closeOverlay();
+                } else {
+                    /* Scrolling UP → show */
+                    header.classList.remove('header-hidden');
+                }
+            } else {
+                /* Near top of page → always visible */
+                header.classList.remove('header-hidden');
+            }
+
+            lastScrollY = currentScrollY;
+        }, { passive: true });
+
+    }());
+
+    /* THEME */
+    const checkbox = document.getElementById('themeCheck');
+    const saved = localStorage.getItem('reha-theme') || 'light';
+    document.documentElement.setAttribute('data-theme', saved);
+    checkbox.checked = saved === 'dark';
+    checkbox.addEventListener('change', () => {
+        const next = checkbox.checked ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('reha-theme', next);
+    });
+
+</script>

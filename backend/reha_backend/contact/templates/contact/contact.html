@@ -1,0 +1,191 @@
+<!-- ===== START CONTACT PAGE ===== -->
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- ===== START PAGE BANNER ===== -->
+
+<section class="page-banner">
+
+    <h1>Contact Us</h1>
+
+    <p>
+        Get in touch with REHA Organization for partnerships,
+        projects, or general inquiries.
+    </p>
+
+</section>
+
+<!-- ===== END PAGE BANNER ===== -->
+
+
+<!-- ===== START CONTACT SECTION ===== -->
+
+<section class="contact-section">
+
+    <div class="contact-container">
+
+        <!-- Contact Information -->
+
+        <div class="contact-info">
+
+            <h2>Contact Information</h2>
+
+            <p><strong>Email:</strong> info@reha.org</p>
+
+            <p><strong>Phone:</strong> +93 700 000 000</p>
+
+            <p><strong>Location:</strong> Kabul, Afghanistan</p>
+
+            <p>
+                Our team is available to answer questions
+                about programs, partnerships, and opportunities.
+            </p>
+
+        </div>
+
+
+        <!-- Contact Form -->
+
+
+        <div class="contact-form">
+
+            <h2>Send a Message</h2>
+
+            {% if messages %}
+            {% for message in messages %}
+            <div class="success-message">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+
+            <div id="formMessage"></div>
+            <form id="contactForm" method="POST">
+
+                {% csrf_token %}
+
+                <input type="text" name="name" placeholder="Your Name" required>
+                <div class="error-text" id="error-name"></div>
+
+                <input type="email" name="email" placeholder="Your Email" required>
+                <div class="error-text" id="error-email"></div>
+
+                <input type="text" name="subject" placeholder="Subject" required>
+                <div class="error-text" id="error-subject"></div>
+
+                <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+                <div class="error-text" id="error-massage"></div>
+
+                <button type="submit" id="submitBtn">
+                    <span id="btnText">Send Message</span>
+                    <span id="loader" class="loader" style="display:none;"></span>
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===== END CONTACT SECTION ===== -->
+
+
+<!-- ===== START GOOGLE MAP SECTION ===== -->
+
+<section class="contact-map">
+
+    <h2 class="section-title">Our Location</h2>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2556.7597202128027!2d69.13148669206066!3d34.505849378623125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d168d03981378d%3A0x7f8b0042b33f35d5!2zQWZnaGFuIFR1cmsgQ2VudGVyINin2YHYutin2YYg2KrYsdqpINiz2YbYqtix!5e1!3m2!1sen!2s!4v1773138749396!5m2!1sen!2s"
+        width="900" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<!-- ===== END GOOGLE MAP SECTION ===== -->
+
+<script>
+    document.querySelector("form").addEventListener("submit", function () {
+
+        const btn = document.getElementById("submitBtn");
+        const text = document.getElementById("btnText");
+        const loader = document.getElementById("loader");
+
+        // Disable button
+        btn.disabled = true;
+
+        // Change text
+        text.innerText = "Sending...";
+
+        // Show spinner
+        loader.style.display = "inline-block";
+
+    });
+</script>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+
+        e.preventDefault(); // جلوگیری از reload
+
+        const form = this;
+        const formData = new FormData(form);
+
+        const btn = document.getElementById("submitBtn");
+        const text = document.getElementById("btnText");
+        const loader = document.getElementById("loader");
+        const messageBox = document.getElementById("formMessage");
+
+        // UI changes
+        btn.disabled = true;
+        text.innerText = "Sending...";
+        loader.style.display = "inline-block";
+
+        fetch("", {
+            method: "POST",
+            body: formData,
+            headers: {
+                "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+
+                loader.style.display = "none";
+                btn.disabled = false;
+                text.innerText = "Send Message";
+
+                // Clear previous errors
+                document.querySelectorAll(".error-text").forEach(el => el.innerText = "");
+
+                if (data.status === "success") {
+
+                    messageBox.innerHTML = `<div class="success-message">Message sent successfully!</div>`;
+                    form.reset();
+
+                } else {
+
+                    // Show errors under each field
+                    for (let field in data.errors) {
+                        let errorDiv = document.getElementById("error-" + field);
+                        if (errorDiv) {
+                            errorDiv.innerText = data.errors[field][0];
+                        }
+                    }
+
+                }
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+    });
+</script>
+
+{% endblock %}
+
+<!-- ===== END CONTACT PAGE ===== -->

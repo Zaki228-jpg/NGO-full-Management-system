@@ -1,0 +1,130 @@
+<!-- ===== START VISION MISSION PAGE ===== -->
+{% extends 'core/base.html' %}
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/reha-styles.css' %}">
+
+<!-- ===== START PAGE BANNER ===== -->
+<section class="page-banner">
+    <div class="grid-overlay"></div>
+    <span class="eyebrow">Purpose &amp; Direction</span>
+    <h1>Vision &amp; <em>Mission</em></h1>
+    <p>Guiding principles that drive the work of REHA Organization.</p>
+</section>
+<!-- ===== END PAGE BANNER ===== -->
+
+
+<!-- ===== START MISSION SECTION ===== -->
+<section class="mission-section">
+    <div class="mission-container">
+
+        <div class="mission-image">
+            <img src="{% static 'images/mission.jpg' %}" alt="REHA Mission in action">
+        </div>
+
+        <div class="mission-text">
+            <p class="section-eyebrow">What We Do</p>
+            <h2>Our Mission</h2>
+            <p>
+                REHA Organization is committed to empowering communities
+                through humanitarian assistance, education support,
+                health programs, and sustainable development initiatives.
+            </p>
+            <p>
+                We work with local communities, partners, and stakeholders
+                to improve quality of life and provide opportunities for
+                people in vulnerable situations.
+            </p>
+        </div>
+
+    </div>
+</section>
+<!-- ===== END MISSION SECTION ===== -->
+
+
+<!-- ===== START VISION SECTION ===== -->
+<section class="vision-section">
+    <div class="vision-container">
+
+        <div class="vision-text">
+            <p class="section-eyebrow">Where We're Headed</p>
+            <h2>Our Vision</h2>
+            <p>
+                REHA envisions a peaceful and developed society where
+                all individuals have equal access to education,
+                healthcare, economic opportunities, and humanitarian support.
+            </p>
+            <p>
+                Our goal is to create sustainable development that empowers
+                communities and builds resilience for future generations.
+            </p>
+        </div>
+
+        <div class="vision-image">
+            <img src="{% static 'images/vision.jpg' %}" alt="A vision of sustainable Afghanistan">
+        </div>
+
+    </div>
+</section>
+<!-- ===== END VISION SECTION ===== -->
+
+
+<!-- ===== START STRATEGIC GOALS ===== -->
+<section class="goals">
+    <p class="section-eyebrow">Strategic Pillars</p>
+    <h2 class="section-title">Our Strategic <span>Goals</span></h2>
+
+    <div class="goals-container">
+
+        <div class="goal-card" data-number="01">
+            <h3>
+                <span class="icon">📚</span>
+                Education Development
+            </h3>
+            <p>
+                Improving access to quality education for children and youth
+                across underserved communities in Afghanistan.
+            </p>
+        </div>
+
+        <div class="goal-card" data-number="02">
+            <h3>
+                <span class="icon">🏥</span>
+                Health Services
+            </h3>
+            <p>
+                Providing healthcare awareness and community health support
+                to improve wellbeing and preventive care.
+            </p>
+        </div>
+
+        <div class="goal-card" data-number="03">
+            <h3>
+                <span class="icon">🤝</span>
+                Community Empowerment
+            </h3>
+            <p>
+                Supporting sustainable livelihoods and community resilience
+                to reduce dependency and foster self-reliance.
+            </p>
+        </div>
+
+        <div class="goal-card" data-number="04">
+            <h3>
+                <span class="icon">🛡️</span>
+                Humanitarian Response
+            </h3>
+            <p>
+                Delivering emergency assistance during crises and disasters
+                with speed, dignity, and compassion.
+            </p>
+        </div>
+
+    </div>
+</section>
+<!-- ===== END STRATEGIC GOALS ===== -->
+
+{% endblock %}
+<!-- ===== END VISION MISSION PAGE ===== -->

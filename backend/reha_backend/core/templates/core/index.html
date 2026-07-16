@@ -1,0 +1,330 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+
+<!-- BACK TO TOP -->
+<a href="#" id="back-to-top" aria-label="Back to top">
+    <i class="ti ti-arrow-up"></i>
+</a>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+
+    <div class="hero-slider">
+        <div class="slide active">
+            <img src="{% static 'images/slide1.jpg' %}" alt="REHA humanitarian work">
+        </div>
+        <div class="slide">
+            <img src="{% static 'images/slide2.jpg' %}" alt="REHA helping communities">
+        </div>
+        <div class="slide">
+            <img src="{% static 'images/slide3.jpg' %}" alt="REHA development programs">
+        </div>
+    </div>
+
+    <div class="hero-content">
+        <div class="hero-eyebrow">Afghanistan · Humanitarian Aid</div>
+        <h1>REHA<br><em>Organization</em></h1>
+        <p>Supporting communities, empowering women, and delivering humanitarian assistance across Afghanistan.</p>
+        <div class="hero-buttons">
+            <a href="/about/" class="btn">Learn More</a>
+            <a href="/donate/" class="donate-btn">Donate Now</a>
+        </div>
+    </div>
+
+    <div class="hero-scroll">
+        <div class="hero-scroll-line"></div>
+        <span>Scroll</span>
+    </div>
+
+    <div class="hero-counter">
+        <div class="hero-dot active"></div>
+        <div class="hero-dot"></div>
+        <div class="hero-dot"></div>
+    </div>
+
+</section>
+
+<!-- ===== WHO WE ARE ===== -->
+<section class="who-we-are">
+    <div class="who-container">
+
+        <div class="who-image">
+            <img src="{% static 'images/about.jpg' %}" alt="REHA Organization">
+            <div class="who-badge">
+                <span class="who-badge-num">10+</span>
+                <span class="who-badge-text">Years of Service</span>
+            </div>
+        </div>
+
+        <div class="who-content">
+            <p class="section-label">Who We Are</p>
+            <h2>Building a Better<br><em>Afghanistan</em></h2>
+            <p>REHA Organization is a humanitarian and development organization working to support vulnerable
+                communities across Afghanistan. Our programs focus on education, health services, emergency assistance,
+                and women empowerment.</p>
+            <p>We are committed to improving the quality of life for people through sustainable development and
+                community support.</p>
+            <a href="/about/" class="read-more-btn">Discover our story</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== VISION / MISSION ===== -->
+<section class="vision-mission">
+    <!-- canvas is purely decorative — global CSS rule enforces pointer-events:none on all canvas -->
+    <canvas id="networkCanvas"></canvas>
+    <div class="vision-mission-inner">
+        <div class="vision-block">
+            <span class="vm-label">Vision</span>
+            <p class="vm-text">In the spirit of excellence, aspiring for knowledge and growth.</p>
+        </div>
+        <div class="vm-divider"></div>
+        <div class="vision-block" style="margin-bottom:0">
+            <span class="vm-label">Mission</span>
+            <p class="vm-text">A vibrant organization inspiring humanitarian and development excellence.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CORE VALUES ===== -->
+<section class="core-values">
+    <div class="core-values-header">
+        <p class="section-label">Our Core Values</p>
+        <h2 class="section-title">What We <em>Stand For</em></h2>
+    </div>
+
+    <div class="values-container">
+        <div class="value-card">
+            <div class="value-icon"><i class="ti ti-eye"></i></div>
+            <h3>Transparency</h3>
+            <p>We ensure openness and honesty in all our activities and programs.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon"><i class="ti ti-shield-check"></i></div>
+            <h3>Accountability</h3>
+            <p>We are responsible to the communities we serve and our partners.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon"><i class="ti ti-heart"></i></div>
+            <h3>Humanity</h3>
+            <p>We believe in protecting human dignity and supporting vulnerable people.</p>
+        </div>
+        <div class="value-card">
+            <div class="value-icon"><i class="ti ti-users"></i></div>
+            <h3>Respect</h3>
+            <p>We respect cultural diversity and the rights of all communities.</p>
+        </div>
+    </div>
+
+    <a href="/values/" class="values-btn">Learn More</a>
+</section>
+
+<!-- ===== WHAT WE DO ===== -->
+<section class="what-we-do">
+    <div class="section-header">
+        <div>
+            <p class="section-label">What We Do</p>
+            <h2 class="section-title">Our <em>Programs</em></h2>
+        </div>
+    </div>
+
+    <div class="programs-container">
+        <a href="/education/" class="program-card">
+            <div class="program-icon"><i class="ti ti-school"></i></div>
+            <h3>Education Programs</h3>
+            <p>Supporting schools, students, and educational development for communities.</p>
+            <span class="program-arrow">→</span>
+        </a>
+        <a href="/health/" class="program-card">
+            <div class="program-icon"><i class="ti ti-heart-plus"></i></div>
+            <h3>Health &amp; WASH</h3>
+            <p>Providing healthcare support, sanitation, and clean water programs.</p>
+            <span class="program-arrow">→</span>
+        </a>
+        <a href="/emergency/" class="program-card">
+            <div class="program-icon"><i class="ti ti-first-aid-kit"></i></div>
+            <h3>Emergency Relief</h3>
+            <p>Delivering humanitarian assistance during emergencies and crises.</p>
+            <span class="program-arrow">→</span>
+        </a>
+        <a href="/women/" class="program-card">
+            <div class="program-icon"><i class="ti ti-gender-female"></i></div>
+            <h3>Women Empowerment</h3>
+            <p>Empowering women through education, training, and economic opportunities.</p>
+            <span class="program-arrow">→</span>
+        </a>
+    </div>
+</section>
+
+<!-- ===== WHERE WE WORK ===== -->
+<section class="where-we-work">
+    <p class="section-label" style="justify-content:center">Where We Work</p>
+    <h2 class="section-title">Our <em>Reach</em></h2>
+    <p class="map-description">REHA Organization operates humanitarian and development programs in several provinces
+        across Afghanistan.</p>
+
+    <div class="map-container">
+        <svg viewBox="0 0 500 300" class="afghanistan-map">
+            <a href="/kabul/">
+                <circle cx="260" cy="150" r="9" class="province active"></circle>
+                <text x="260" y="136" fill="rgba(240,237,232,0.45)" font-size="9" text-anchor="middle"
+                    font-family="DM Sans,sans-serif">Kabul</text>
+            </a>
+            <a href="herat.html">
+                <circle cx="80" cy="170" r="9" class="province active"></circle>
+                <text x="80" y="156" fill="rgba(240,237,232,0.45)" font-size="9" text-anchor="middle"
+                    font-family="DM Sans,sans-serif">Herat</text>
+            </a>
+            <a href="badakhshan.html">
+                <circle cx="350" cy="80" r="9" class="province active"></circle>
+                <text x="350" y="66" fill="rgba(240,237,232,0.45)" font-size="9" text-anchor="middle"
+                    font-family="DM Sans,sans-serif">Badakhshan</text>
+            </a>
+            <a href="takhar.html">
+                <circle cx="310" cy="110" r="9" class="province active"></circle>
+                <text x="310" y="96" fill="rgba(240,237,232,0.45)" font-size="9" text-anchor="middle"
+                    font-family="DM Sans,sans-serif">Takhar</text>
+            </a>
+            <a href="panjshir.html">
+                <circle cx="270" cy="130" r="9" class="province active"></circle>
+                <text x="270" y="116" fill="rgba(240,237,232,0.45)" font-size="9" text-anchor="middle"
+                    font-family="DM Sans,sans-serif">Panjshir</text>
+            </a>
+        </svg>
+    </div>
+</section>
+
+<!-- ===== STATISTICS ===== -->
+<section class="statistics">
+    <!-- canvas: global CSS gives pointer-events:none, explicit attribute as belt-and-suspenders -->
+    <canvas id="statsCanvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;"></canvas>
+
+    <p class="section-label">What We've Achieved</p>
+    <h2 class="section-title">Our <em>Impact</em></h2>
+
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="icon-wrap icon-ongoing"><i class="ti ti-refresh"></i></div>
+            <h3 class="counter" data-target="8">0</h3>
+            <div class="stat-divider"></div>
+            <p>Ongoing Projects</p>
+        </div>
+        <div class="stat-box">
+            <div class="icon-wrap icon-completed"><i class="ti ti-circle-check"></i></div>
+            <h3 class="counter" data-target="35">0</h3>
+            <div class="stat-divider"></div>
+            <p>Completed Projects</p>
+        </div>
+        <div class="stat-box">
+            <div class="icon-wrap icon-incoming"><i class="ti ti-clock-bolt"></i></div>
+            <h3 class="counter" data-target="5">0</h3>
+            <div class="stat-divider"></div>
+            <p>Incoming Projects</p>
+        </div>
+        <div class="stat-box">
+            <div class="icon-wrap icon-gallery"><i class="ti ti-photo"></i></div>
+            <h3 class="counter" data-target="120">0</h3>
+            <div class="stat-divider"></div>
+            <p>Total Members</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PROJECTS SLIDER ===== -->
+<section class="projects">
+    <p class="section-label">Our Work</p>
+    <h2>Our Projects</h2>
+
+    <div class="slider">
+        <button class="prev">&#10094;</button>
+
+        <div class="slider-track" id="projectSlider">
+            {% for project in projects %}
+            <div class="project-card">
+                <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                <div class="project-card-body">
+                    <h3>{{ project.title }}</h3>
+                    <p><strong>Location:</strong> {{ project.location }}</p>
+                    <p><strong>Start:</strong> {{ project.start_date }}</p>
+                    <p><strong>End:</strong> {{ project.end_date }}</p>
+                    <p><strong>Status:</strong> {{ project.status }}</p>
+                    <span class="desc">{{ project.description|truncatewords:12 }}</span>
+                    <a href="{% url 'project_detail' project.pk %}" class="read-more">Read More</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <button class="next">&#10095;</button>
+    </div>
+</section>
+
+<!-- ===== NEWS SLIDER ===== -->
+<section class="news">
+    <p class="section-label">Stay Informed</p>
+    <h2>Latest News</h2>
+
+    <div class="slider">
+        <button class="prev">&#10094;</button>
+
+        <div class="slider-track" id="newsSlider">
+            {% for article in news %}
+            <div class="news-card">
+                <div class="card-image">
+                    {% if article.video_url %}
+                    <a href="{{ article.external_link }}" target="_blank" class="video-card">
+                        <img src="https://img.youtube.com/vi/{{ article.video_url|cut:'https://www.youtube.com/embed/' }}/0.jpg"
+                            class="video-thumbnail" alt="{{ article.title }}">
+                        <div class="play-button">▶</div>
+                    </a>
+                    {% else %}
+                    <a href="{% url 'news_detail' article.id %}">
+                        <img src="{{ article.image.url }}" alt="{{ article.title }}">
+                    </a>
+                    {% endif %}
+                </div>
+                <h3>{{ article.title }}</h3>
+                <p>{{ article.category }}</p>
+                <p>{{ article.published_date }}</p>
+                <span class="desc">{{ article.content|truncatewords:12 }}</span>
+            </div>
+            {% endfor %}
+        </div>
+
+        <button class="next">&#10095;</button>
+    </div>
+</section>
+
+<!-- ===== PARTNERS ===== -->
+<section class="partners">
+    <p class="section-label" style="justify-content:center">Our Partners</p>
+    <h2 class="section-title">Trusted <em>Partners</em></h2>
+    <p class="partners-text">REHA Organization works with national and international partners to deliver humanitarian
+        and development programs.</p>
+
+    <div class="partners-container">
+        <div class="partner-logo"><img src="{% static 'images/partner1.png' %}" alt="Partner 1"></div>
+        <div class="partner-logo"><img src="{% static 'images/partner2.png' %}" alt="Partner 2"></div>
+        <div class="partner-logo"><img src="{% static 'images/partner3.png' %}" alt="Partner 3"></div>
+        <div class="partner-logo"><img src="{% static 'images/partner4.png' %}" alt="Partner 4"></div>
+        <div class="partner-logo"><img src="{% static 'images/partner5.png' %}" alt="Partner 5"></div>
+    </div>
+</section>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+{% endblock %}
